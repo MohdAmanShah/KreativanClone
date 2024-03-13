@@ -28,6 +28,7 @@ ul {
     --navbar-menu-active-color: #00bbee;
     --navbar-menu-animation-time: 300ms;
     --sidebar-position: -100%;
+    --searchbar-position: -100%;
 }
 
 body {
@@ -792,6 +793,8 @@ footer {
     align-items: center;
     gap: 56px;
     box-shadow: 0 0px 1px 1px rgb(183, 183, 183);
+    transform: translateY(var(--searchbar-position));
+    transition: transform 300ms linear;
 }
 
 
@@ -856,4 +859,61 @@ footer {
 .close.butn:hover::after,
 .close.butn:hover::before {
     background-color: gray;
+}
+
+.search-icon {
+    position: relative;
+}
+
+.search.butn {
+    position: absolute;
+    inset: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    z-index: 302;
+    cursor: pointer;
+}
+
+.search.butn:hover,
+.search.butn:focus {
+    outline: none;
+    border: none;
+}
+
+
+.nav-item.ser {
+    position: relative;
+}
+.nav-item:hover > .services-menu{
+    transform: scaleY(1);
+}
+
+.services-menu {
+    position: absolute;
+    background-color: #1f2531;
+    box-sizing: content-box;
+    width: 227px;
+    padding-inline: 34px 27px;
+    padding-block: 30px;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 200ms linear;
+}
+
+.services-menu>ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.services-menu>ul>li>a {
+    color: white;
+    font-size: 14px;
+    /* font-weight: bold; */
+}
+.services-menu>ul>li:first-child>a{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
 }

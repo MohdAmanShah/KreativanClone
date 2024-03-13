@@ -6,6 +6,21 @@ const App = document.querySelector("#container");
 const NavBar = document.getElementById('navbar');
 const Toggler = document.querySelector('div.toggler');
 const SidebarCloseButton = document.querySelector('.close.button');
+const SearchBar = document.querySelector('.searchbar');
+const SearchBarCloseButton = document.querySelector('.close.butn');
+const SearchButton = document.querySelector('.search.butn');
+
+console.log(SearchBar);
+console.log(SearchBarCloseButton);
+console.log(SearchButton);
+
+SearchButton.addEventListener('click',e=>{
+    document.documentElement.style.setProperty("--searchbar-position",'0%');
+})
+
+SearchBarCloseButton.addEventListener('click',e=>{
+    document.documentElement.style.setProperty("--searchbar-position",'-100%');
+})
 
 
 Toggler.addEventListener('click', e => {
@@ -15,6 +30,9 @@ Toggler.addEventListener('click', e => {
 SidebarCloseButton.addEventListener('click', e => {
     document.documentElement.style.setProperty('--sidebar-position', '-100%');
 })
+
+
+
 
 window.addEventListener('scroll', event => {
     let Bounds = App.getBoundingClientRect();
