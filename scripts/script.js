@@ -9,17 +9,21 @@ const SidebarCloseButton = document.querySelector('.close.button');
 const SearchBar = document.querySelector('.searchbar');
 const SearchBarCloseButton = document.querySelector('.close.butn');
 const SearchButton = document.querySelector('.search.butn');
+const ServicesMenuOptions = document.querySelectorAll('.services-menu>ul>li')
 
-console.log(SearchBar);
-console.log(SearchBarCloseButton);
-console.log(SearchButton);
-
-SearchButton.addEventListener('click',e=>{
-    document.documentElement.style.setProperty("--searchbar-position",'0%');
+let time = 70;
+let delay = 0;
+Array.from(ServicesMenuOptions).forEach(item => {
+    item.style.transition = `opacity ${time}ms linear ${delay}ms`;
+    delay += time;
 })
 
-SearchBarCloseButton.addEventListener('click',e=>{
-    document.documentElement.style.setProperty("--searchbar-position",'-100%');
+SearchButton.addEventListener('click', e => {
+    document.documentElement.style.setProperty("--searchbar-position", '0%');
+})
+
+SearchBarCloseButton.addEventListener('click', e => {
+    document.documentElement.style.setProperty("--searchbar-position", '-100%');
 })
 
 
