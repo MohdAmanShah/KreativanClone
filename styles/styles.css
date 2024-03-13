@@ -777,3 +777,83 @@ footer {
 .close.button {
     cursor: pointer;
 }
+
+
+.searchbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    height: 100px;
+    z-index: 301;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 56px;
+    box-shadow: 0 0px 1px 1px rgb(183, 183, 183);
+}
+
+
+.search-input {
+    flex-grow: 1;
+}
+
+.search-input>form>input {
+    display: block;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding-inline-start: 12px;
+}
+
+
+.search-input>form>input:hover,
+.search-input>form>input:focus {
+    outline: none;
+    border: none;
+}
+
+.search-input>form>input::placeholder {
+    font-size: 16px;
+    color: rgb(183, 183, 183);
+}
+
+
+.close.butn {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: background-color 200ms linear;
+    cursor: pointer;
+}
+
+.close.butn::after,
+.close.butn::before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: rgb(0, 0, 0);
+    transform-origin: center;
+    transition: background-color 300ms linear;
+}
+
+
+
+.close.butn::before {
+    transform: rotate(-45deg);
+}
+
+.close.butn::after {
+    transform: rotate(45deg);
+}
+
+.close.butn:hover::after,
+.close.butn:hover::before {
+    background-color: gray;
+}
