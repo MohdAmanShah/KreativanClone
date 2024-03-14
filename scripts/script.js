@@ -14,7 +14,7 @@ const ServicesMenuOptions = document.querySelectorAll('.services-menu>ul>li')
 let time = 70;
 let delay = 0;
 Array.from(ServicesMenuOptions).forEach(item => {
-    item.style.transition = `opacity ${time}ms linear ${delay}ms`;
+    item.style.transition = `opacity ${time}ms ease-in ${delay}ms`;
     delay += time;
 })
 
