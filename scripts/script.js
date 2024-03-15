@@ -4,12 +4,18 @@ const faqHeader = document.querySelectorAll('.ques>header');
 const stats = document.querySelectorAll('[data-value]');
 const App = document.querySelector("#container");
 const NavBar = document.getElementById('navbar');
-const Toggler = document.querySelector('div.toggler');
+const Toggler = document.querySelectorAll('div.toggler');
 const SidebarCloseButton = document.querySelector('.close.button');
 const SearchBar = document.querySelector('.searchbar');
 const SearchBarCloseButton = document.querySelector('.close.butn');
 const SearchButton = document.querySelector('.search.butn');
 const ServicesMenuOptions = document.querySelectorAll('.services-menu>ul>li')
+const Hamburger = document.querySelector('.navtoggle');
+
+Hamburger.addEventListener('click',e=>{
+    document.documentElement.style.setProperty('--mobile-menu-position','0%')
+})
+
 
 let time = 70;
 let delay = 0;
@@ -26,10 +32,13 @@ SearchBarCloseButton.addEventListener('click', e => {
     document.documentElement.style.setProperty("--searchbar-position", '-100%');
 })
 
+Array.from(Toggler).forEach(i => {
+    i.addEventListener('click', e => {
+        document.documentElement.style.setProperty('--sidebar-position', '0%');
+    });
+})
 
-Toggler.addEventListener('click', e => {
-    document.documentElement.style.setProperty('--sidebar-position', '0%');
-});
+
 
 SidebarCloseButton.addEventListener('click', e => {
     document.documentElement.style.setProperty('--sidebar-position', '-100%');
@@ -38,15 +47,15 @@ SidebarCloseButton.addEventListener('click', e => {
 
 
 
-window.addEventListener('scroll', event => {
-    let Bounds = App.getBoundingClientRect();
-    if (Math.abs(Bounds.top) > window.innerHeight * .75) {
-        NavBar.style.top = "0";
-    }
-    if (Math.abs(Bounds.top) < window.innerHeight * .25) {
-        NavBar.style.top = "-200px";
-    }
-})
+// window.addEventListener('scroll', event => {
+//     let Bounds = App.getBoundingClientRect();
+//     if (Math.abs(Bounds.top) > window.innerHeight * .75) {
+//         NavBar.style.top = "0";
+//     }
+//     if (Math.abs(Bounds.top) < window.innerHeight * .25) {
+//         NavBar.style.top = "-200px";
+//     }
+// })
 
 Array.from(navBarLinks).forEach(link => {
     link.addEventListener('click', navButtonHandler);
