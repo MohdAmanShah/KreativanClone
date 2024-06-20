@@ -1,0 +1,149 @@
+
+footer {
+    background-color: #e6eaed;
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+}
+
+
+.footer.upper {
+    width: var(--container-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    column-gap: 2rem;
+    padding: 2rem 0 4rem 0;
+    position: relative;
+}
+
+.footer.divider {
+    display: block;
+    height: 1px;
+    background-color: #00ddda;
+    outline: none;
+    border: none;
+}
+
+.footer.upper>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.info>img {
+    display: inline-block;
+}
+
+.info>strong>div {
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.875rem;
+}
+
+
+.footer>h6 {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    line-height: 1.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.services.footer>ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    row-gap: 30px;
+}
+
+.services.footer>ul>li>a {
+    text-decoration: none;
+    color: #00c6ee;
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.875em;
+    text-transform: none;
+    letter-spacing: 0em;
+    word-spacing: 0px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.contact.footer>ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    list-style: none;
+}
+
+
+
+.contact.footer>ul>li a {
+    color: #00c6ee;
+    font-weight: bold;
+    line-height: 1.875rem;
+}
+
+.contact.footer>.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 30px;
+}
+
+.footer.company>ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    list-style: none;
+}
+
+.footer.company>ul>li>strong>a,
+.footer.company>ul>li>a {
+    color: #00c6ee;
+    font-weight: bold;
+    line-height: 2rem;
+}
+
+.footer.lower {
+    width: var(--container-width);
+    margin: 0 auto;
+    padding: 26px 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 16px;
+
+}
+
+.footer.lower>ul {
+    display: flex;
+    gap: 6px;
+}
+
+.footer.lower>ul>li {
+    padding-right: 6px;
+    border-right: 1px solid black;
+}
+
+
+.footer.lower>ul>li>a {
+    font-size: 14px;
+    color: black;
+}
+
+.lower.footer>ul>li:last-child {
+    border-right: 0;
+}
+
+
+.footer.upper a {
+    transition: color 200ms linear;
+}
+
+.contact.footer>ul>li a:hover,
+.services.footer>ul>li>a:hover,
+.company.links.footer>ul>li>strong>a:hover,
+.company.links.footer>ul>li>a:hover {
+    color: black;
+}

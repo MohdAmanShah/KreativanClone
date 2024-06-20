@@ -1,0 +1,18 @@
+.top h1 {
+    font-size: 5rem;
+    text-align: center;
+    line-height: 85px;
+}
+
+.top p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .top h1 {
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+}

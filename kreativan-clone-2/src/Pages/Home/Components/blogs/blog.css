@@ -1,0 +1,96 @@
+.blogs {
+    width: 80%;
+    margin: 0 auto;
+    padding-block: 5rem;
+}
+
+.blogs-wrapper>h2 {
+    margin-bottom: 2rem;
+}
+
+.blogs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 300px;
+    gap: 2rem;
+}
+
+.blog-grid-item>.image-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.blog-grid-item>.image-wrapper>img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+.blog-grid-item .image-wrapper>.text {
+    position: absolute;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.696);
+    z-index: 100;
+    gap: 1rem;
+    color: white;
+    font-weight: bold;
+}
+
+.user-date-type>.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row>.user,
+.row>.date {
+    flex-grow: 1;
+}
+
+.row>.type {
+    flex-basis: 100%;
+}
+
+.user-date-type * a {
+    color: white;
+}
+
+.user-date-type * a:hover {
+    color: blue;
+}
+
+.user-date-type,
+.message.body {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.75rem;
+}
+
+.user-date-type>.row>div>span {
+    margin-right: 12px;
+}
+
+.image-wrapper>img,
+.image-wrapper>.text {
+    transition: all 300ms ease-in-out;
+}
+
+.image-wrapper:hover>.zoom-in {
+    transform: scale(1.1);
+}
+
+.image-wrapper:hover>.slide-up {
+    bottom: 0px !important; 
+    background-color: rgba(0, 0, 0, 0.537) !important;
+}
+
+.readmore.btn>button {
+    padding: 10px 15px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.76);
+}

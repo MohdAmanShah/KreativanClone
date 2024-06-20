@@ -1,0 +1,26 @@
+.ServiceWrapper {
+    display: flex;
+    margin-block: 5rem;
+    gap: 4rem;
+}
+
+    .ServiceWrapper:nth-child(2n+1) {
+        flex-direction: row-reverse;
+    }
+
+    .ServiceWrapper > div {
+        flex-basis: 50%;
+    }
+
+        .ServiceWrapper > div > img {
+            width: 100%;
+            height: auto;
+        }
+
+@media screen and (max-width: 1024px) {
+
+    .ServiceWrapper,
+    .ServiceWrapper:nth-child(2n+1) {
+        flex-direction: column-reverse;
+    }
+}
